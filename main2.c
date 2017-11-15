@@ -2,16 +2,21 @@
 /* main2.c */
 #include <stdio.h>
 #include "vector.h"
-
-int x[2] = {1, 2};
-int y[2] = {3, 4};
-int z[2];
-
 int main() {
-	addvec(x, y, z, 2);
-	printf("z = [%d %d]\n", z[0], z[1]);
-	multvec(x,y,z,2);
-	printf("z = [%d %d]\n", z[0], z[1]);
+	vector vectorX,vectorY,vectorZ;
+	printf("Ingrese un elemento 1 de vector X: ");      
+	scanf("%d",&vectorX->valor1);
+	printf("Ingrese un elemento 2 de vector X: ");      
+	scanf("%d",&vectorX->valor2);
+	printf("Ingrese un elemento 1 de vector Y ");      
+	scanf("%d",&vectorY->valor1);
+	printf("Ingrese un elemento 2 de vector Y: ");      
+	scanf("%d",&vectorY->valor2);
+
+	addvec(vectorX,vectorY, vectorZ, 2);
+	printf("sumando X + Y  resultado : z = [%d %d]\n", vectorZ->valor1, vectorZ->valor2);
+	multvec(vectorX,vectorY, vectorZ, 2);
+	printf("multiplicando X * Y  resultado : z = [%d %d]\n", vectorZ->valor1, vectorZ->valor2);
 	return 0;
 }
 /* $end main2 */
